@@ -43,6 +43,9 @@ async function exec () {
 function parseArgs () {
   return {
     string: core.getInput('string') || config.string,
+    query: {
+      fields: core.getInput('fields') || ""
+    },
     from: core.getInput('from'),
   }
 }

@@ -11,9 +11,12 @@ inputs:
     description: Find from predefined place (should be either 'branch', or 'commits')
     required: false
     default: commits
+  fields:
+    description: Fields to extract from the issue seperated by comma
+    required: false
 outputs:
   issue:
     description: Key of the found issue
 runs:
-  using: 'node16'
+  using: 'node20'
   main: './dist/index.js'
