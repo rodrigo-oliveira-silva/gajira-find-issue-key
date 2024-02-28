@@ -58,10 +58,11 @@ module.exports = class {
     }
 
     for (const issueKey of match) {
-      const issue = await this.Jira.getIssue(issueKey)
+      const issue = await this.Jira.getIssue(issueKey, this.argv.query)
 
       if (issue) {
-        return { issue: issue.key }
+        console.log(`Found issue: ${issue}`)
+        return { issue: issue }
       }
     }
   }
@@ -32545,6 +32546,9 @@ async function exec () {
 function parseArgs () {
   return {
     string: core.getInput('string') || config.string,
+    query: {
+      fields: core.getInput('fields') || ""
+    },
     from: core.getInput('from'),
   }
 }
