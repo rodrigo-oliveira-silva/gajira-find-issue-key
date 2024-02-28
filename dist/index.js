@@ -32547,7 +32547,7 @@ function parseArgs () {
   return {
     string: core.getInput('string') || config.string,
     query: {
-      fields: core.getInput('fields') || ""
+      fields: core.getInput('fields').split(',') || ""
     },
     from: core.getInput('from'),
   }
