@@ -32520,8 +32520,6 @@ async function exec () {
       config,
     }).execute()
 
-    console.log(`Result ${result}`)
-
     if (result) {
       //console.log(`Detected issueKey: ${result.issue.key}`)
       console.log(`Saving ${result.issue} to ${cliConfigPath}`)
