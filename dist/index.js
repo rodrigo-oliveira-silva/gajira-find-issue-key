@@ -53,7 +53,6 @@ module.exports = class {
 
     if (!match) {
       console.log(`String does not contain issueKeys`)
-
       return
     }
 
@@ -32520,6 +32519,8 @@ async function exec () {
       argv: parseArgs(),
       config,
     }).execute()
+
+    console.log(`Result ${result}`)
 
     if (result) {
       //console.log(`Detected issueKey: ${result.issue.key}`)

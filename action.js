@@ -47,7 +47,6 @@ module.exports = class {
 
     if (!match) {
       console.log(`String does not contain issueKeys`)
-
       return
     }
 
